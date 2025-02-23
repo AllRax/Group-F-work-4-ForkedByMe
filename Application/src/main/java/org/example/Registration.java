@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Registration {
     private JFrame frame;
-    private JTabbedPane loginTab ,infoTab,personalTab,settingsTab;
+    private JTabbedPane Tab ;
     public Registration(){mainWindow();};
     public JFrame mainWindow(){
         frame = new JFrame();
@@ -14,11 +14,16 @@ public class Registration {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
+        frame.add(BorderLayout.CENTER,this.login());
         frame.setMinimumSize(new Dimension(400, 300));
         frame.pack();
         return frame;
     }
     public JTabbedPane login(){
-        loginTab = new JTabbedPane();
+        Tab = new JTabbedPane();
+        Tab.setPreferredSize(new Dimension(400,400));
+        Tab.setVisible(true);
+
+        return Tab;
     }
 }
