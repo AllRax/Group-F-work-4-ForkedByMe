@@ -1,4 +1,4 @@
-package org.example;
+package Registration;
 
 import javax.swing.*;
 import java.awt.*;

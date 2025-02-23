@@ -1,5 +1,7 @@
 package org.example;
 
+import Registration.Registration;
+
 import javax.swing.*;
 
 public class Main {
