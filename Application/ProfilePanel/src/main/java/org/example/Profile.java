@@ -3,13 +3,14 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import Users.Users;
 
 public class Profile {
     private JPanel viewPanel;
     private JLabel label1,label2,label3,labelOutput1,labelOutput2,labelOutput3;
     private JButton backToListButton,deleteButton;
     JList<> contactListview;
-    ArrayList<> contactListModel = new ArrayList<>();
+    ArrayList<Users>Userlist = new ArrayList<>();
     public JPanel profile()
     {
         viewPanel = new JPanel();
@@ -102,9 +103,9 @@ public class Profile {
         deleteButton.setPreferredSize(new Dimension(100,50));
         deleteButton.addActionListener(e -> {
             int selected= contactListview.getSelectedIndex();
-            if(selected>=0&&selected<contactListModel.size()){
-                contactsList.remove(selected);
-                contactLisstModel.remove(selected);
+            if(selected>=0&&selected<Userlist.size()){
+               Userlist.remove(selected);
+                contactListview.remove(selected);
                 cardLayout.show(centerPanel,"contactList");
             }
 
