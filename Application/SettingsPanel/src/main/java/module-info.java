@@ -1,0 +1,3 @@
+module SettingsPanel {
+    requires mainapp;
+}

@@ -1,0 +1,3 @@
+module RegisterPanel {
+    requires mainapp;
+}
