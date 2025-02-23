@@ -2,10 +2,14 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Profile {
     private JPanel viewPanel;
     private JLabel label1,label2,label3,labelOutput1,labelOutput2,labelOutput3;
+    private JButton backToListButton,deleteButton;
+    JList<> contactListview;
+    ArrayList<> contactListModel = new ArrayList<>();
     public JPanel profile()
     {
         viewPanel = new JPanel();
@@ -74,6 +78,38 @@ public class Profile {
         labelOutput3.setFont(new Font("Verdana", Font.BOLD, 14));
         labelOutput3.setBorder(BorderFactory.createEmptyBorder(0,10,0,0));
         return labelOutput3;
+    }
+    public JButton backToList()
+    {
+        backToListButton=new JButton("Back To List");
+        backToListButton.setBackground(new Color(60,179,113));
+        backToListButton.setForeground(Color.white);
+        backToListButton.setFocusPainted(false);
+        backToListButton.setPreferredSize(new Dimension(100,50));
+        backToListButton.addActionListener(e -> {
+            cardLayout.first(centerPanel);
+        });
+        return backToListButton;
+    }
+
+    //Logic for the delete button
+    public JButton delete()
+    {
+        deleteButton=new JButton("Delete");
+        deleteButton.setBackground(new Color(140,17,11));
+        deleteButton.setForeground(Color.white);
+        deleteButton.setFocusPainted(false);
+        deleteButton.setPreferredSize(new Dimension(100,50));
+        deleteButton.addActionListener(e -> {
+            int selected= contactListview.getSelectedIndex();
+            if(selected>=0&&selected<contactListModel.size()){
+                contactsList.remove(selected);
+                contactLisstModel.remove(selected);
+                cardLayout.show(centerPanel,"contactList");
+            }
+
+        });
+        return deleteButton;
     }
 
 }
