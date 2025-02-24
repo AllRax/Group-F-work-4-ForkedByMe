@@ -286,7 +286,7 @@ public class Registration {
                 field.setText("");
                 field2.setText("");
                 field3.setText("");
-
+                Tab.setSelectedIndex(0);
                }
         });
         return saveButton;
@@ -307,7 +307,7 @@ public class Registration {
                 Editfield.setText(c.getNames());
                 Editfield3.setText(c.getNumber());
                 Editfield2.setText(c.getEmail());
-
+                Tab.setSelectedIndex(3);
             }
         });
         return EditButton;
@@ -335,7 +335,7 @@ public class Registration {
                 contactsList.set(selectedIndex,new Users(Editfield.getText(),Editfield2.getText(),Editfield3.getText()));
                 contactLisstModel.set(selectedIndex,c.getNames());
 
-
+                Tab.setSelectedIndex(0);
 
 
             }
@@ -355,7 +355,7 @@ public class Registration {
             Editfield.setText("");
             Editfield2.setText("");
             Editfield3.setText("");
-
+            Tab.setSelectedIndex(0);
         });
         return EditcancelButton;
     }
@@ -370,7 +370,7 @@ public class Registration {
             field.setText("");
             field2.setText("");
             field3.setText("");
-
+            Tab.setSelectedIndex(0);
         });
         return cancelButton;
     }
@@ -384,7 +384,7 @@ public class Registration {
         backToListButton.setFocusPainted(false);
         backToListButton.setPreferredSize(new Dimension(100,50));
         backToListButton.addActionListener(e -> {
-
+            Tab.setSelectedIndex(0);
         });
         return backToListButton;
     }
@@ -402,6 +402,7 @@ public class Registration {
             if(selected>=0&&selected<contactLisstModel.size()){
                 contactsList.remove(selected);
                 contactLisstModel.remove(selected);
+                Tab.setSelectedIndex(0);
 
             }
 
@@ -427,7 +428,7 @@ public class Registration {
                 labelOutput1.setText(text);
                 labelOutput2.setText(text3);
                 labelOutput3.setText(text2);
-
+                Tab.setSelectedIndex(2);
             }
 
         });
@@ -443,16 +444,17 @@ public class Registration {
         AddButton.setFocusPainted(false);
         AddButton.setPreferredSize(new Dimension(150,50));
         AddButton.addActionListener(e->{
-
+            Tab.setSelectedIndex(1);
         });
         return AddButton;
-    }
+    } }
 
 
 
 
 
 
-}
+
+
 
 
