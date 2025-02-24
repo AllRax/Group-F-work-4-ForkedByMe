@@ -1,4 +1,4 @@
-package org.example;
+package Profile;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ public class Profile {
     private JPanel viewPanel;
     private JLabel label1,label2,label3,labelOutput1,labelOutput2,labelOutput3;
     private JButton backToListButton,deleteButton;
-    JList<> contactListview;
+    JList<Users> contactListview = new JList<>();
     ArrayList<Users>Userlist = new ArrayList<>();
     public JPanel profile()
     {
@@ -88,7 +88,7 @@ public class Profile {
         backToListButton.setFocusPainted(false);
         backToListButton.setPreferredSize(new Dimension(100,50));
         backToListButton.addActionListener(e -> {
-            cardLayout.first(centerPanel);
+
         });
         return backToListButton;
     }
@@ -106,7 +106,7 @@ public class Profile {
             if(selected>=0&&selected<Userlist.size()){
                Userlist.remove(selected);
                 contactListview.remove(selected);
-                cardLayout.show(centerPanel,"contactList");
+
             }
 
         });
