@@ -3,6 +3,7 @@ package Registration;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import Users.Users;
 
 
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public class Registration {
     private JFrame frame;
     private JTabbedPane Tab ;
-    private ArrayList<ContactsList> contactsList = new ArrayList<>();
+    private ArrayList<Users> contactsList = new ArrayList<>();
     private DefaultListModel<String> contactLisstModel;
     private JPanel northPanel, southPanel, westPanel, centerPanel, formPanel, viewPanel, listPanel,editPanel;
     private JTextField field, field2, field3,Editfield,Editfield2,Editfield3;
@@ -279,14 +280,14 @@ public class Registration {
             String email = field3.getText();
             if (!name.isBlank() && !number.isBlank() && !email.isBlank())
             {
-                ContactsList newContact = new ContactsList(name, number, email);
+                Users newContact = new Users(name, number, email);
                 contactsList.add(newContact);
                 contactLisstModel.addElement(name);
                 field.setText("");
                 field2.setText("");
                 field3.setText("");
 
-                cardLayout.show(centerPanel, "contactList");}
+               }
         });
         return saveButton;
     }
@@ -302,11 +303,11 @@ public class Registration {
         EditButton.addActionListener(e->{
             int selectedIndex=contactListview.getSelectedIndex();
             if(selectedIndex >= 0 && selectedIndex < contactLisstModel.size()){
-                ContactsList c=contactsList.get(selectedIndex);
+                Users c=contactsList.get(selectedIndex);
                 Editfield.setText(c.getNames());
                 Editfield3.setText(c.getNumber());
                 Editfield2.setText(c.getEmail());
-                cardLayout.show(centerPanel,"editForm");
+
             }
         });
         return EditButton;
@@ -323,7 +324,7 @@ public class Registration {
         Edit.addActionListener(e->{
             int selectedIndex=contactListview.getSelectedIndex();
             if(selectedIndex >= 0 && selectedIndex < contactLisstModel.size()){
-                ContactsList c=contactsList.get(selectedIndex);
+                Users c=contactsList.get(selectedIndex);
 
                 c.setNames(Editfield.getText());
                 c.setNumber(Editfield2.getText());
@@ -331,12 +332,12 @@ public class Registration {
 
 
 
-                contactsList.set(selectedIndex,new ContactsList(Editfield.getText(),Editfield2.getText(),Editfield3.getText()));
+                contactsList.set(selectedIndex,new Users(Editfield.getText(),Editfield2.getText(),Editfield3.getText()));
                 contactLisstModel.set(selectedIndex,c.getNames());
 
 
 
-                cardLayout.show(centerPanel,"contactList");
+
             }
 
         });
@@ -354,7 +355,7 @@ public class Registration {
             Editfield.setText("");
             Editfield2.setText("");
             Editfield3.setText("");
-            cardLayout.show(centerPanel, "contactList");
+
         });
         return EditcancelButton;
     }
@@ -369,7 +370,7 @@ public class Registration {
             field.setText("");
             field2.setText("");
             field3.setText("");
-            cardLayout.show(centerPanel, "contactList");
+
         });
         return cancelButton;
     }
@@ -383,7 +384,7 @@ public class Registration {
         backToListButton.setFocusPainted(false);
         backToListButton.setPreferredSize(new Dimension(100,50));
         backToListButton.addActionListener(e -> {
-            cardLayout.first(centerPanel);
+
         });
         return backToListButton;
     }
@@ -401,7 +402,7 @@ public class Registration {
             if(selected>=0&&selected<contactLisstModel.size()){
                 contactsList.remove(selected);
                 contactLisstModel.remove(selected);
-                cardLayout.show(centerPanel,"contactList");
+
             }
 
         });
@@ -419,14 +420,14 @@ public class Registration {
             int getSelectedIndex=contactListview.getSelectedIndex();
             if(getSelectedIndex>=0&&getSelectedIndex<contactLisstModel.size())
             {
-                ContactsList c=contactsList.get(getSelectedIndex);
+                Users c=contactsList.get(getSelectedIndex);
                 text=c.getNames();
                 text2=c.getNumber();
                 text3=c.getEmail();
                 labelOutput1.setText(text);
                 labelOutput2.setText(text3);
                 labelOutput3.setText(text2);
-                cardLayout.show(centerPanel,"contactDetails");
+
             }
 
         });
@@ -442,7 +443,7 @@ public class Registration {
         AddButton.setFocusPainted(false);
         AddButton.setPreferredSize(new Dimension(150,50));
         AddButton.addActionListener(e->{
-            cardLayout.show(centerPanel, "creationForm");
+
         });
         return AddButton;
     }
@@ -454,4 +455,4 @@ public class Registration {
 
 }
 
-}
+

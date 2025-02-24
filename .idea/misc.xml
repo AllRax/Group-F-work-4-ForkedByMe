@@ -7,6 +7,14 @@
         <option value="$PROJECT_DIR$/Application/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Application/DisplayPanel/pom.xml" />
+        <option value="$PROJECT_DIR$/Application/ProfilePanel/pom.xml" />
+        <option value="$PROJECT_DIR$/Application/RegisterPanel/pom.xml" />
+        <option value="$PROJECT_DIR$/Application/SettingsPanel/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="22" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

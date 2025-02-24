@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mainapp" />
-        <module name="ProfilePanel" />
-        <module name="SettingsPanel" />
-        <module name="RegisterPanel" />
-        <module name="DisplayPanel" />
+        <module name="Users" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DisplayPanel" target="21" />
+      <module name="ProfilePanel" target="21" />
+      <module name="RegisterPanel" target="21" />
+      <module name="SettingsPanel" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
