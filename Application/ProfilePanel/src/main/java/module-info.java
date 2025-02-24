@@ -1,4 +1,6 @@
 module ProfilePanel {
     requires java.desktop;
-    requires mainapp;
+    requires RegisterPanel;
+    exports org.example;
+    exports Profile;
 }

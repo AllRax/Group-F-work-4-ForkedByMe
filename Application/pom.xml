@@ -13,6 +13,7 @@
         <module>ProfilePanel</module>
         <module>SettingsPanel</module>
         <module>mainapp</module>
+        <module>DisplayPanel</module>
     </modules>
 
     <properties>

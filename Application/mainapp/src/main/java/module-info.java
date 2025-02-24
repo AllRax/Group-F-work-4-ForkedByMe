@@ -1,6 +1,7 @@
 module mainapp {
     requires java.desktop;
-    exports Users;
+    exports org.example1.Users;
     exports Registration;
+    requires ProfilePanel;
 
 }

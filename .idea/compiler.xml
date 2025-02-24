@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mainapp" />
         <module name="ProfilePanel" />
         <module name="SettingsPanel" />
         <module name="RegisterPanel" />
+        <module name="DisplayPanel" />
       </profile>
     </annotationProcessing>
   </component>
