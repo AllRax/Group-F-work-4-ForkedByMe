@@ -9,11 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>RegisterPanel</module>
-        <module>ProfilePanel</module>
-        <module>SettingsPanel</module>
         <module>mainapp</module>
-        <module>DisplayPanel</module>
         <module>Users</module>
     </modules>
 
