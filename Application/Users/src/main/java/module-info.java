@@ -1,3 +1,0 @@
-module Users {
-    exports Users;
-}
