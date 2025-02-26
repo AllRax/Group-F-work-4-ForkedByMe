@@ -6,7 +6,6 @@ pipeline{
     }
 
 
-//         hello
      stages{
 
          stage("Build"){
