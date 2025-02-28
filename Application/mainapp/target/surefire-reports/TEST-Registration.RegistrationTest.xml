@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Registration.RegistrationTest" time="3.547" tests="23" errors="0" skipped="0" failures="5">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Registration.RegistrationTest" time="3.05" tests="23" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\PAVILION\AppData\Local\Temp\surefire3308254356265368287 2025-02-28T12-22-21_817-jvmRun1 surefire-20250228122233366_1tmp surefire_0-20250228122233366_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\PAVILION\AppData\Local\Temp\surefire14725190056441507127 2025-02-28T12-49-28_516-jvmRun1 surefire-20250228124930854_1tmp surefire_0-20250228124930854_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\PAVILION\Desktop\group-F-work4\Application\mainapp\target\test-classes;C:\Users\PAVILION\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\PAVILION\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\PAVILION\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\PAVILION\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\PAVILION\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\PAVILION\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\PAVILION\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PAVILION\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\PAVILION\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\PAVILION\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testEditFormInstanceOfJPanel" classname="Registration.RegistrationTest" time="0.985"/>
-  <testcase name="testContactListOfPanel" classname="Registration.RegistrationTest" time="0.072"/>
-  <testcase name="testViewDetailsButtonAction" classname="Registration.RegistrationTest" time="0.173">
+  <testcase name="testEditFormInstanceOfJPanel" classname="Registration.RegistrationTest" time="0.738"/>
+  <testcase name="testContactListOfPanel" classname="Registration.RegistrationTest" time="0.085"/>
+  <testcase name="testViewDetailsButtonAction" classname="Registration.RegistrationTest" time="0.162">
     <failure message="expected: &lt;2&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2> but was: <0>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -140,7 +140,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="testNumberOutputLabel" classname="Registration.RegistrationTest" time="0.075">
+  <testcase name="testNumberOutputLabel" classname="Registration.RegistrationTest" time="0.079">
     <failure message="expected: &lt;Output Number&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Output Number> but was: <>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -218,10 +218,10 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="testCancelButtonAction" classname="Registration.RegistrationTest" time="0.152"/>
-  <testcase name="testEmailLabelText" classname="Registration.RegistrationTest" time="0.068"/>
-  <testcase name="testBackToListButtonAction" classname="Registration.RegistrationTest" time="0.145"/>
-  <testcase name="testEmailOutputLabelText" classname="Registration.RegistrationTest" time="0.071">
+  <testcase name="testCancelButtonAction" classname="Registration.RegistrationTest" time="0.153"/>
+  <testcase name="testEmailLabelText" classname="Registration.RegistrationTest" time="0.071"/>
+  <testcase name="testBackToListButtonAction" classname="Registration.RegistrationTest" time="0.144"/>
+  <testcase name="testEmailOutputLabelText" classname="Registration.RegistrationTest" time="0.068">
     <failure message="expected: &lt;Output Email&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Output Email> but was: <>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -299,8 +299,8 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="testContactDetailsInstanceOfPanel" classname="Registration.RegistrationTest" time="0.072"/>
-  <testcase name="testNameOutputLabel" classname="Registration.RegistrationTest" time="0.074">
+  <testcase name="testContactDetailsInstanceOfPanel" classname="Registration.RegistrationTest" time="0.078"/>
+  <testcase name="testNameOutputLabel" classname="Registration.RegistrationTest" time="0.07">
     <failure message="expected: &lt;Output Name:&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Output Name:> but was: <>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -378,18 +378,18 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="testLoginInstanceOfJTabbedPane" classname="Registration.RegistrationTest" time="0.081"/>
-  <testcase name="testNameLabelText" classname="Registration.RegistrationTest" time="0.08"/>
-  <testcase name="testField2Text" classname="Registration.RegistrationTest" time="0.13"/>
-  <testcase name="testField3Text" classname="Registration.RegistrationTest" time="0.084"/>
-  <testcase name="testEditFieldText" classname="Registration.RegistrationTest" time="0.098"/>
-  <testcase name="testCreationFormInstanceOfJPanel" classname="Registration.RegistrationTest" time="0.075"/>
-  <testcase name="testMainWindowInstanceOfJFrame" classname="Registration.RegistrationTest" time="0.169"/>
-  <testcase name="testMainWindowDoesNotThrow" classname="Registration.RegistrationTest" time="0.184"/>
-  <testcase name="testNumberLabelText" classname="Registration.RegistrationTest" time="0.079"/>
-  <testcase name="testDeleteButtonAction" classname="Registration.RegistrationTest" time="0.168"/>
-  <testcase name="testFieldText" classname="Registration.RegistrationTest" time="0.081"/>
-  <testcase name="testAddNewContactButtonAction" classname="Registration.RegistrationTest" time="0.191">
+  <testcase name="testLoginInstanceOfJTabbedPane" classname="Registration.RegistrationTest" time="0.076"/>
+  <testcase name="testNameLabelText" classname="Registration.RegistrationTest" time="0.064"/>
+  <testcase name="testField2Text" classname="Registration.RegistrationTest" time="0.087"/>
+  <testcase name="testField3Text" classname="Registration.RegistrationTest" time="0.078"/>
+  <testcase name="testEditFieldText" classname="Registration.RegistrationTest" time="0.09"/>
+  <testcase name="testCreationFormInstanceOfJPanel" classname="Registration.RegistrationTest" time="0.069"/>
+  <testcase name="testMainWindowInstanceOfJFrame" classname="Registration.RegistrationTest" time="0.118"/>
+  <testcase name="testMainWindowDoesNotThrow" classname="Registration.RegistrationTest" time="0.142"/>
+  <testcase name="testNumberLabelText" classname="Registration.RegistrationTest" time="0.065"/>
+  <testcase name="testDeleteButtonAction" classname="Registration.RegistrationTest" time="0.137"/>
+  <testcase name="testFieldText" classname="Registration.RegistrationTest" time="0.095"/>
+  <testcase name="testAddNewContactButtonAction" classname="Registration.RegistrationTest" time="0.148">
     <failure message="expected: &lt;1&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -467,5 +467,5 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="testEditContactButtonAction" classname="Registration.RegistrationTest" time="0.133"/>
+  <testcase name="testEditContactButtonAction" classname="Registration.RegistrationTest" time="0.135"/>
 </testsuite>
