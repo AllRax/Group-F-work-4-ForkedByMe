@@ -7,7 +7,6 @@ import Users.Users;
 
 
 
-
 public class Registration {
     private JFrame frame;
     private JTabbedPane Tab ;
