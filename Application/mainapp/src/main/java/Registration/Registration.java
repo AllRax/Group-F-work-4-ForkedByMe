@@ -10,12 +10,39 @@ import Users.Users;
 public class Registration {
     private JFrame frame;
     private JTabbedPane Tab ;
+
+    public ArrayList<Users> getContactsList() {
+        return contactsList;
+    }
+
+    public void setContactsList(ArrayList<Users> contactsList) {
+        this.contactsList = contactsList;
+    }
+
     private ArrayList<Users> contactsList = new ArrayList<>();
     private DefaultListModel<String> contactLisstModel;
     private JPanel northPanel, southPanel, westPanel, centerPanel, formPanel, viewPanel, listPanel,editPanel;
     private JTextField field, field2, field3,Editfield,Editfield2,Editfield3;
     private String text, text2, text3;
     private JLabel label2, label1, label3, labelOutput1, labelOutput2, labelOutput3,title;
+
+    public JList getContactListview() {
+        return contactListview;
+    }
+
+    public void setContactListview(JList contactListview) {
+        this.contactListview = contactListview;
+    }
+
+    public DefaultListModel<String> getContactLisstModel() {
+        return contactLisstModel;
+    }
+
+
+    public void setContactLisstModel(DefaultListModel<String> contactLisstModel) {
+        this.contactLisstModel = contactLisstModel;
+    }
+
     JList contactListview;
     private JButton saveButton, cancelButton, EditButton, AddButton, backToListButton, deleteButton, viewButton,Edit,EditcancelButton;
     public Registration(){mainWindow();};
@@ -88,6 +115,8 @@ public class Registration {
 
         return listPanel;
     }
+
+
     //The list part of the contact list
     public JPanel upperList(){
         JPanel up=new JPanel();

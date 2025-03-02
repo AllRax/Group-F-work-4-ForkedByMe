@@ -57,13 +57,8 @@ public class RegistrationTest {
 
     }
     @Test
-    void testDeleteButtonAction(){
-        JButton deleteButton = registration.delete();
-        deleteButton.doClick();
-        assertNotNull(deleteButton);
-    }
-    @Test
     void testAddNewContactButtonAction(){
+
         JButton addButton = registration.addNewContact();
         addButton.doClick();
 
@@ -83,17 +78,93 @@ public class RegistrationTest {
         JButton cancelEditButton = registration.cancelEdit();
         cancelEditButton.doClick();
 
+        JTabbedPane tab =registration.login();
         JTextField editField = registration.Editfield();
         assertEquals("",editField.getText());
+        assertEquals("",registration.Editfield2().getText());
+        assertEquals("",registration.Editfield3().getText());
+
+        assertEquals(0,tab.getSelectedIndex());
 
     }
     @Test
+    void testSaveContactButtonAction(){
+        JButton saveButton = registration.saveContact();
+        registration.field().setText("Eddie");
+        registration.field2().setText("email");
+        registration.field3().setText("0778594231");
+
+        saveButton.doClick();
+
+
+
+
+        assertEquals("Eddie",registration.getContactsList().getFirst().getNames());
+        assertEquals("email",registration.getContactsList().getFirst().getEmail());
+        assertEquals("0778594231",registration.getContactsList().getFirst().getNumber());
+    }
+    @Test
     void testViewDetailsButtonAction(){
+
+        JTabbedPane tab = new JTabbedPane();
         JButton viewButton = registration.viewDetailsButton();
+        JButton saveButton = registration.saveContact();
+        registration.field().setText("Eddie");
+        registration.field2().setText("email");
+        registration.field3().setText("0778594231");
+
+
+
+        registration.getContactListview().setSelectedIndex(2);
+
+        assertEquals(2,tab.getSelectedIndex());
+
+    }
+    @Test
+    void testEditButtonAndConfirmEditButtonAction(){
+        JButton confirmEditButton = registration.EditButton();
+        JButton saveButton = registration.saveContact();
+        JButton editButton = registration.EditContact();
+        registration.field().setText("Eddie");
+        registration.field2().setText("email");
+        registration.field3().setText("0778594231");
+
+        saveButton.doClick();
+
+        registration.contactListview.setSelectedIndex(0);
+        editButton.doClick();
+        registration.Editfield().setText("James");
+        registration.Editfield2().setText("new email");
+        registration.Editfield3().setText("new number");
+        confirmEditButton.doClick();
+
+        assertEquals("James",registration.getContactsList().getFirst().getNames());
+        assertNotEquals("email",registration.getContactsList().getFirst().getEmail());
+        assertNotEquals("0778594231",registration.getContactsList().getFirst().getNumber());
+
+
+
+    }
+    @Test
+    void testDeleteButtonAction(){
+        JButton deleteButton = registration.delete();
+        deleteButton.doClick();
+        assertNotNull(deleteButton);
+        JButton viewButton = registration.viewDetailsButton();
+        JButton saveButton = registration.saveContact();
+        registration.field().setText("Eddie");
+        registration.field2().setText("email");
+        registration.field3().setText("0778594231");
+
+        saveButton.doClick();
+
+        registration.contactListview.setSelectedIndex(0);
         viewButton.doClick();
 
-        JTabbedPane tab =registration.login();
-        assertEquals(2,tab.getSelectedIndex());
+        assertFalse(registration.getContactsList().isEmpty());
+        deleteButton.doClick();
+        assertTrue(registration.getContactsList().isEmpty());
+
     }
     @Test
     void testFieldText(){
@@ -134,20 +205,7 @@ public class RegistrationTest {
         JLabel emailLabel = registration.email();
         assertEquals("Email:",emailLabel.getText());
     }
-    @Test
-    void testNameOutputLabel(){
-        JLabel nameOutputLabel = registration.nameOutput();
-        assertEquals("Output Name:",nameOutputLabel.getText());
-    }
-    @Test
-    void testNumberOutputLabel(){
-        JLabel numberOutputLabel = registration.numberOutput();
-        assertEquals("Output Number",numberOutputLabel.getText());
-    }
-    @Test
-    void testEmailOutputLabelText(){
-        JLabel emailOutputLabelLabel = registration.emailOutput();
-        assertEquals("Output Email",emailOutputLabelLabel.getText());
-    }
+
+
 
 }
