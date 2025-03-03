@@ -1,10 +1,7 @@
 package Registration;
-import Users.Users;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import javax.swing.*;
-import java.awt.*;
-import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RegistrationTest {
@@ -60,9 +57,10 @@ public class RegistrationTest {
     void testAddNewContactButtonAction(){
 
         JButton addButton = registration.addNewContact();
+        JTabbedPane tab =registration.login();
         addButton.doClick();
 
-        JTabbedPane tab =registration.login();
+
         assertEquals(1,tab.getSelectedIndex());
     }
     @Test
@@ -106,16 +104,19 @@ public class RegistrationTest {
     @Test
     void testViewDetailsButtonAction(){
 
-        JTabbedPane tab = new JTabbedPane();
+        JTabbedPane tab = registration.login();
         JButton viewButton = registration.viewDetailsButton();
         JButton saveButton = registration.saveContact();
         registration.field().setText("Eddie");
         registration.field2().setText("email");
         registration.field3().setText("0778594231");
 
+        saveButton.doClick();
 
 
-        registration.getContactListview().setSelectedIndex(2);
+
+        registration.getContactListview().setSelectedIndex(0);
+        viewButton.doClick();
 
         assertEquals(2,tab.getSelectedIndex());
 
