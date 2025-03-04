@@ -74,15 +74,13 @@ pipeline{
 
           }
 
-          stage("Deploy"){
-
-                     steps{
-
-                      echo "Deploying Application..."
-                    }
-
-              }
-
-         }
-
+          stage("Deploy") {
+            steps {
+                echo "Deploying Application..."
+                bat '''
+                "C:\\Program Files\\butler.exe" push Group-F-work-4-ForkByMe.jar allrax/fourthwork:windows
+                '''
+            }
+        }
     }
+}
